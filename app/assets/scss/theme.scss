@@ -1,5 +1,9 @@
+@import "./my_variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import "../../../node_modules/font-awesome/scss/font-awesome";
+@import "./helpers";
+//@import "./icons";
+
 
 h1 {
   color: #3d3d3d;

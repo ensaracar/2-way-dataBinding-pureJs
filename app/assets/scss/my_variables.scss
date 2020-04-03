@@ -1,0 +1,241 @@
+$img: '../img/';
+
+// colors
+$black: #000;
+$white: #fff;
+
+
+// fonts
+
+/*$roboto: 'Roboto', sans-serif;
+$font-family-base:          $roboto;
+$font-size-base:            0.9375rem;*/
+
+$font-weight-lighter:         100;
+$font-weight-bolder:          900;
+
+/*
+
+
+// theme
+
+$body-bg:                   #F7F7F7;
+$body-color:                $gray_l;
+$headings-color:            $blue;
+
+$headings-margin-bottom:      0;
+//$headings-font-family:        null !default;
+$headings-font-weight:        600;
+
+$link-hover-decoration:                   none;
+
+
+
+
+$grid-breakpoints: (
+		xs: 0,
+		sm: 576px,
+		md: 768px,
+		lg: 1024px,
+		xl: 1366px
+);
+
+$container-max-widths: (
+		sm: 540px,
+		md: 720px,
+		lg: 990px,
+		xl: 1316px
+);
+
+
+$border-radius:               6px;
+$border-radius-lg:            12px;
+$border-radius-sm:            3px;
+
+// NAVS
+
+$nav-link-padding-y:                .7rem;
+$nav-link-padding-x:                 calc(1rem + 14px) $nav-link-padding-y 1.5rem;
+//$nav-link-disabled-color:           $gray-600 !default;
+
+$nav-tabs-border-color:             transparent;
+//$nav-tabs-border-width:             $border-width !default;
+$nav-tabs-border-radius:            28px;
+$nav-tabs-link-hover-border-color:  transparent;
+$nav-tabs-link-active-color:        #fff;
+$nav-tabs-link-active-bg:           $blue !important;
+$nav-tabs-link-active-border-color: transparent !important;
+
+//$nav-pills-border-radius:           $border-radius !default;
+//$nav-pills-link-active-color:       $component-active-color !default;
+//$nav-pills-link-active-bg:          $component-active-bg !default;
+
+//$nav-divider-color:                 $gray-200 !default;
+//$nav-divider-margin-y:              $spacer / 2 !default;
+
+
+// Breadcrumbs
+
+$breadcrumb-font-size:              .9375rem;
+
+$breadcrumb-padding-y:              .95rem;
+$breadcrumb-padding-x:              1rem;
+$breadcrumb-item-padding:           .65rem;
+
+$breadcrumb-margin-bottom:          0;
+
+$breadcrumb-bg:                     $gray_b;
+$breadcrumb-divider-color:          #fff;
+$breadcrumb-active-color:           $breadcrumb-divider-color;
+$breadcrumb-divider:                quote("\f105");
+
+//$breadcrumb-border-radius:          $border-radius !default;
+
+
+.breadcrumb {
+	flex-wrap: nowrap !important;
+	overflow: hidden;
+}
+
+.breadcrumb-fluid {
+	.breadcrumb {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.breadcrumb-item {
+	white-space: nowrap;
+	+ .breadcrumb-item {
+		&::before {
+			font-family: FontAwesome;
+		}
+	}
+	a {
+		color: $breadcrumb-divider-color;
+		transition: all ease .15s;
+		&:hover {
+			color: $blue;
+		}
+	}
+	&.active {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+}
+
+
+$label-margin-bottom: 0;
+
+
+// Pagination
+
+$pagination-padding-y:              0;
+$pagination-padding-x:              0;
+$pagination-line-height:            1.25;
+
+$pagination-color:                  $gray_b;
+$pagination-bg:                     transparent;
+$pagination-border-width:           0;
+
+
+$pagination-active-color:           $gray_b;
+$pagination-active-bg:              $blue;
+//$pagination-active-border-color:    $pagination-active-bg !default;
+
+//$pagination-hover-color:            $link-hover-color !default;
+//$pagination-hover-bg:               $gray-200 !default;
+//$pagination-hover-border-color:     $gray-300 !default;
+
+//$pagination-disabled-color:         $gray-600 !default;
+//$pagination-disabled-bg:            $white !default;
+//$pagination-disabled-border-color:  $gray-300 !default;
+
+//$pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
+//$pagination-focus-outline:          0 !default;
+
+.page-link {
+	width: 35px;
+	height: 35px;
+	border-radius: 35px !important;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+.page-item {
+	& + .page-item {
+		margin-left: .5rem;
+	}
+}
+
+!*.page-item:first-child .page-link {
+	border-radius: 35px !important;
+
+}
+.page-item:last-child .page-link {
+	border-radius: 35px !important;
+
+}*!
+
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+!*$table-cell-padding:          .75rem !default;
+$table-cell-padding-sm:       .3rem !default;*!
+
+!*$table-color:                 $body-color !default;
+$table-bg:                    null !default;
+$table-accent-bg:             rgba($black, .05) !default;
+$table-hover-color:           $table-color !default;
+$table-hover-bg:              rgba($black, .075) !default;
+$table-active-bg:             $table-hover-bg !default;*!
+
+$table-border-width:          0;
+//$table-border-color:          $border-color !default;
+
+//$table-head-bg:               $gray-200 !default;
+//$table-head-color:            $gray-700 !default;
+
+!*$table-bg-level:              -9 !default;
+$table-border-level:          -6 !default;*!
+
+
+
+// Carousel
+
+$carousel-control-color:             $blue;
+$carousel-control-width:             auto;
+$carousel-control-opacity:           1;
+$carousel-control-hover-opacity:     1;
+$carousel-control-transition:        opacity .15s ease;
+
+$carousel-indicator-width:           7px;
+$carousel-indicator-height:          7px;
+$carousel-indicator-hit-area-height: 7px;
+$carousel-indicator-spacer:          3px;
+$carousel-indicator-bg:              $white;
+$carousel-indicator-active-bg:       $blue_l;
+//$carousel-indicator-transition:      opacity .6s ease !default;
+
+$carousel-caption-width:             100%;
+//$carousel-caption-color:             $white;
+
+//$carousel-control-icon-width:        20px !default;
+
+
+$carousel-control-prev-icon-bg:      url('data:image/svg+xml,<svg fill="#{$carousel-control-color}" xmlns="http://www.w3.org/2000/svg" width="8.4" height="15.593" viewBox="0 0 8.4 15.593"><path d="M103.746,7.8l6.776-6.776a.6.6,0,0,0-.848-.848l-7.2,7.2a.6.6,0,0,0,0,.848l7.2,7.2a.6.6,0,0,0,.848-.848Z" transform="translate(-102.298 0)"></path></svg>');
+$carousel-control-next-icon-bg:      url('data:image/svg+xml,<svg fill="#{$carousel-control-color}" xmlns="http://www.w3.org/2000/svg" width="8.4" height="15.593" viewBox="0 0 8.4 15.593"><path d="M109.249,7.8l-6.776-6.776a.6.6,0,0,1,.848-.848l7.2,7.2a.6.6,0,0,1,0,.848l-7.2,7.2a.6.6,0,0,1-.848-.848Z" transform="translate(-102.298 0)"/></svg>');
+
+//$carousel-transition-duration:       .6s !default;
+//$carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+
+
+// bootstrap select variables settings;
+
+
+*/

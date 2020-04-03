@@ -5,15 +5,44 @@ const pugLang = require('gulp-pug');
 //ext
 const gulpCopy = require('gulp-copy');
 const uglify = require('gulp-uglify');
-var pipeline = require('readable-stream').pipeline;
 const imagemin = require('gulp-imagemin');
+const rename = require("gulp-rename");
+const sourcemaps = require('gulp-sourcemaps');
 
+const iconfont = require('gulp-iconfont');
+const iconfontCss = require('gulp-iconfont-css');
+var fontName = 'Icons';
 
 const browserSync = require('browser-sync').create();
+
 //scss
+function icon() {
+    return gulp.src(['app/assets/icons/*.svg'])
+        .pipe(iconfontCss({
+            fontName: fontName,
+            path: 'app/assets/scss/templates/_icons.scss',
+            targetPath: '../../scss/_icons.scss',
+            fontPath: '../fonts/icons/',
+            centerHorizontally: true
+        }))
+        .pipe(iconfont({
+            fontName: fontName,
+            fontHeight: 1001, //(>= 1000)
+            normalize: true
+        }))
+        .pipe(gulp.dest('app/assets/fonts/icons/'));
+}
+
 function style() {
     return gulp.src('./app/assets/scss/**/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error',sass.logError))
+        .pipe(gulp.dest('./dist/assets/css'))
+        .pipe(sass({outputStyle: 'compressed'}).on('error',sass.logError))
+        .pipe(sourcemaps.write('.'))
+        .pipe(rename(function (path) {
+            path.basename += ".min";
+        }))
         .pipe(gulp.dest('./dist/assets/css'))
         .pipe(browserSync.stream());
 }
@@ -54,11 +83,14 @@ function fonts() {
 function js() {
     gulp
         .src('./app/assets/js/**/*.js')
+        .pipe(gulp.dest('./dist/assets/js'))
         .pipe(uglify())
+        .pipe(rename(function (path) {
+            path.basename += ".min";
+        }))
         .pipe(gulp.dest('./dist/assets/js'))
         .pipe(browserSync.stream())
 }
-
 
 browserSync.init({
     server: {
@@ -67,8 +99,9 @@ browserSync.init({
     }
 });
 
+
 function watch() {
-    gulp.watch('./app/assets/scss/**/*.scss', style)
+    gulp.watch('./app/assets/scss/**/*.scss', style);
     gulp.watch('./app/assets/js/**/*.js').on('change', js);
     gulp.watch('./app/**/*.pug').on('change', pug);
 }
@@ -78,6 +111,7 @@ exports.js = js;
 exports.watch = watch;
 exports.img = img;
 exports.fonts = fonts;
+exports.icon = icon;
 
 gulp.task('default', exports.img);
 gulp.task('server', exports.watch);
