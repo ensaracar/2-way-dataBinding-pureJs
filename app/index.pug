@@ -5,10 +5,20 @@ html(lang='en')
         include inc/header
 
         main
+            .container
+                .form-row.align-items-center
+                    .col
+                        .form-group
+                            span binded
+                            input#myText1.form-control(type='text')
+                    .col
+                        .form-group
+                            span binded
+                            input#myText2.form-control(type='text')
+                    .col
+                        .form-group
+                            span binded:
+                            span#myDomElement(type='text')
 
-
-        .container
-            h1 gulp 4 -
-                mark "bootstrap": "^4.3.1"
 
         include inc/footer

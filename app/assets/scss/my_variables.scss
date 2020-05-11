@@ -205,37 +205,5 @@ $table-border-level:          -6 !default;*!
 
 
 
-// Carousel
-
-$carousel-control-color:             $blue;
-$carousel-control-width:             auto;
-$carousel-control-opacity:           1;
-$carousel-control-hover-opacity:     1;
-$carousel-control-transition:        opacity .15s ease;
-
-$carousel-indicator-width:           7px;
-$carousel-indicator-height:          7px;
-$carousel-indicator-hit-area-height: 7px;
-$carousel-indicator-spacer:          3px;
-$carousel-indicator-bg:              $white;
-$carousel-indicator-active-bg:       $blue_l;
-//$carousel-indicator-transition:      opacity .6s ease !default;
-
-$carousel-caption-width:             100%;
-//$carousel-caption-color:             $white;
-
-//$carousel-control-icon-width:        20px !default;
-
-
-$carousel-control-prev-icon-bg:      url('data:image/svg+xml,<svg fill="#{$carousel-control-color}" xmlns="http://www.w3.org/2000/svg" width="8.4" height="15.593" viewBox="0 0 8.4 15.593"><path d="M103.746,7.8l6.776-6.776a.6.6,0,0,0-.848-.848l-7.2,7.2a.6.6,0,0,0,0,.848l7.2,7.2a.6.6,0,0,0,.848-.848Z" transform="translate(-102.298 0)"></path></svg>');
-$carousel-control-next-icon-bg:      url('data:image/svg+xml,<svg fill="#{$carousel-control-color}" xmlns="http://www.w3.org/2000/svg" width="8.4" height="15.593" viewBox="0 0 8.4 15.593"><path d="M109.249,7.8l-6.776-6.776a.6.6,0,0,1,.848-.848l7.2,7.2a.6.6,0,0,1,0,.848l-7.2,7.2a.6.6,0,0,1-.848-.848Z" transform="translate(-102.298 0)"/></svg>');
-
-//$carousel-transition-duration:       .6s !default;
-//$carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
-
-
-
-// bootstrap select variables settings;
-
 
 */
